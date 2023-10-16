@@ -12,5 +12,11 @@
     "@sveltejs/vite-plugin-svelte": "^2.4.2",
     "svelte": "^4.0.5",
     "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "@airgap/beacon-sdk": "^4.0.12",
+    "@taquito/beacon-wallet": "^17.3.2",
+    "@taquito/taquito": "^17.3.2",
+    "vite-compatible-readable-stream": "^3.6.1"
   }
 }
