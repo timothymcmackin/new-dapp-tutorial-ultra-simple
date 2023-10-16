@@ -115,6 +115,10 @@
     {#if wallet}
       <p>The address of the connected wallet is {address}.</p>
       <p>Its balance in tez is {balance}.</p>
+      <p>To get tez, go to <a href="https://faucet.ghostnet.teztnets.xyz/" target="_blank">
+        https://faucet.ghostnet.teztnets.xyz/
+        </a>.
+      </p>
       <p>Its balance in the bank is {bankBalance}.</p>
       <p>
         Deposit tez:
