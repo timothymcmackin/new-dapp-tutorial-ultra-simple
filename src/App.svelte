@@ -27,11 +27,9 @@
 
   const getBankBalance = async (walletAddress) => {
     const contract = await Tezos.wallet.at(contractAddress);
-    const response = await contract.contractViews.balance(walletAddress).executeView({
-      viewCaller: contractAddress,
-    });
-    const balanceMutez = response.c;
-    bankBalance = balanceMutez / 1000000;
+    const storage = await contract.storage();
+    const balanceMutez = await storage.get(walletAddress);
+    bankBalance = isNaN(balanceMutez) ? 0 : balanceMutez / 1000000;
   }
 
   const connectWallet = async () => {
